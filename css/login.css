@@ -1,0 +1,120 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: inherit;
+}
+
+.card {
+  background-color: #fff;
+  width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: inherit;
+}
+
+.login-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 3px;
+  width: 100%;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.or-text {
+  text-align: center;
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: space-between; /* Add this line */
+}
+
+button.google-button,
+button.facebook-button {
+  background-color: transparent;
+  color: #007bff;
+  border: none;
+  padding: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.3s ease;
+}
+
+button.google-button:hover,
+button.facebook-button:hover {
+  color: #0056b3;
+}
+
+.social-buttons img {
+  margin-right: 8px;
+  height: 20px;
+}
+
+.signup-text {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.signup-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
