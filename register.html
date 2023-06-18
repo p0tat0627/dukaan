@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register Page</title>
+  <link rel="stylesheet" type="text/css" href="./css/register.css">
+</head>
+<body>
+    <div class="card">
+      <h1 class="title">Dukaan</h1>
+      <h2 class="subtitle">Sign Up</h2>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Username or email">
+      </div>
+      <button class="get-started-button" onclick="navigateToLogin()">Get Started</button>
+      <p class="or-text">or get started with</p>
+      <div class="social-buttons">
+        <button>
+          <img src="/assets/google.png" alt="Google Logo">
+        </button>
+        <button>
+          <img src="/assets/facebook.png" alt="Facebook Logo">
+        </button>
+      </div>
+      <p class="terms-text">By continuing, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</p>
+      <div class="login-link">
+        Already a member? <a href="login.html">Log in</a>
+      </div>
+    </div>
+  
+    
+  
+    <script>
+      function navigateToLogin() {
+        window.location.href = "login.html";
+      }
+    </script>
+  </body>
+</html>
+
+

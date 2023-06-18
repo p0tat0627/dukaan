@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="./css/dashboard.css">
+
+        <title>Responsive sidebar submenus</title>
+    </head>
+    <body>
+        <!--========== HEADER ==========-->
+        <header class="header">
+            <div class="header__container">
+                <img src="./assets/shop.jpg" alt="" class="header__img">
+
+                <a href="#" class="header__logo">Home</a>
+    
+                <div class="header__search">
+                    <input type="search" placeholder="Search" class="header__input">
+                    <i class='bx bx-search header__icon'></i>
+                </div>
+    
+                <div class="header__toggle">
+                    <i class='bx bx-menu' id="header-toggle"></i>
+                </div>
+            </div>
+        </header>
+
+        <!--========== NAV ==========-->
+        <div class="nav" id="navbar">
+            <nav class="nav__container">
+                <div>
+                    <a href="#" class="nav__link nav__logo">
+                        <i class='bx bxs-disc nav__icon' ></i>
+                        <span class="nav__logo-name">Dukaan</span>
+                    </a>
+    
+                    <div class="nav__list">
+                        <div class="nav__items">
+                            <!-- <h3 class="nav__subtitle">Profile</h3> -->
+    
+                            <a href="#" class="nav__link active" id="home">
+                                <i class='bx bx-home nav__icon' ></i>
+                                <span class="nav__name">Home</span>
+                            </a>
+                            
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link" id="orders">
+                                    <i class='bx bx-list-ul nav__icon' ></i>
+                                    <span class="nav__name">Orders</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="#allorders" class="nav__dropdown-item" id="allorders">All Orders</a>
+                                        <a href="#abandoned-carts" class="nav__dropdown-item">Abandoned Carts</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="#" class="nav__link" id="delivery">
+                                <i class='bx bx-package nav__icon' ></i>
+                                <span class="nav__name">Delivery</span>
+                            </a>
+
+                            <div class="nav__dropdown">
+                              <a href="#" class="nav__link" id="products">
+                                  <i class='bx bx-windows nav__icon' ></i>
+                                  <span class="nav__name">Products</span>
+                                  <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                              </a>
+
+                              <div class="nav__dropdown-collapse">
+                                  <div class="nav__dropdown-content">
+                                      <a href="#" class="nav__dropdown-item">All Products</a>
+                                      <a href="#" class="nav__dropdown-item">Categories</a>
+                                      <a href="#" class="nav__dropdown-item">Inventory</a>
+                                  </div>
+                              </div>
+                            </div>
+
+                            
+                            
+                            <div class="nav__dropdown">
+                              <a href="#" class="nav__link" id="analytics">
+                                  <i class='bx bx-bar-chart-alt-2 nav__icon' ></i>
+                                  <span class="nav__name">Anlaytics</span>
+                                  <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                              </a>
+
+                              <div class="nav__dropdown-collapse">
+                                  <div class="nav__dropdown-content">
+                                      <a href="#" class="nav__dropdown-item">Sales</a>
+                                      <a href="#" class="nav__dropdown-item">Traffic</a>
+                                      <a href="#" class="nav__dropdown-item">Products</a>
+                                  </div>
+                              </div>
+                            </div>
+
+                            <a href="#" class="nav__link">
+                              <i class='bx bx-dollar-circle nav__icon' ></i>
+                              <span class="nav__name">Payouts</span>
+                            </a>
+
+                            <a href="#" class="nav__link">
+                              <i class='bx bx-money nav__icon' ></i>
+                              <span class="nav__name">Discounts</span>
+                            </a>
+
+                            <a href="#" class="nav__link">
+                              <i class='bx bx-smile nav__icon' ></i>
+                              <span class="nav__name">Audience</span>
+                            </a>
+
+                            <div class="nav__dropdown">
+                              <a href="#" class="nav__link">
+                                  <i class='bx bx-unite nav__icon' ></i>
+                                  <span class="nav__name">Appearance</span>
+                                  <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                              </a>
+
+                              <div class="nav__dropdown-collapse">
+                                  <div class="nav__dropdown-content">
+                                      <a href="#" class="nav__dropdown-item">Themes</a>
+                                      <a href="#" class="nav__dropdown-item">Pages</a>
+                                      <a href="#" class="nav__dropdown-item">Menus</a>
+                                      <a href="#" class="nav__dropdown-item">Blog</a>
+                                  </div>
+                              </div>
+                            </div>
+
+                            <div class="nav__dropdown">
+                              <a href="#" class="nav__link">
+                                  <i class='bx bx-navigation nav__icon' ></i>
+                                  <span class="nav__name">Plugins</span>
+                                  <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                              </a>
+
+                              <div class="nav__dropdown-collapse">
+                                  <div class="nav__dropdown-content">
+                                      <a href="#" class="nav__dropdown-item">All Plugins</a>
+                                      <a href="#" class="nav__dropdown-item">Installed</a>
+                                  </div>
+                              </div>
+                            </div>
+                        </div>
+    
+                        <!-- <div class="nav__items">
+                            
+    
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class='bx bx-bell nav__icon' ></i>
+                                    <span class="nav__name">Notifications</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="#" class="nav__dropdown-item">Blocked</a>
+                                        <a href="#" class="nav__dropdown-item">Silenced</a>
+                                        <a href="#" class="nav__dropdown-item">Publish</a>
+                                        <a href="#" class="nav__dropdown-item">Program</a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-compass nav__icon' ></i>
+                                <span class="nav__name">Explore</span>
+                            </a>
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-bookmark nav__icon' ></i>
+                                <span class="nav__name">Saved</span>
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+
+                <a href="#" class="nav__link nav__logout">
+                    <i class='bx bx-log-out nav__icon' ></i>
+                    <span class="nav__name">Log Out</span>
+                </a>
+            </nav>
+        </div>
+
+        <!--========== CONTENTS ==========-->
+        <main>
+            <section id="homeSection">
+                <div class="card">
+                    <h2 class="card__title">Complete your store setup...</h2>
+                    <p class="card__content">
+                      Use high-quality images and product descriptions to have a great-looking product page. Let's get started.
+                    </p>
+                    <ul class="card__list">
+                      <li class="card__item">
+                        Your e-commerce store is ready! <a href="#" class="card__link">View Store</a>
+                      </li>
+                      <li class="card__item">
+                        Add your first product <button class="card__button">Add Product</button>
+                      </li>
+                      <li class="card__item">
+                        Setup payments
+                      </li>
+                    </ul>
+                  </div>
+            </section>
+    
+            <section id="ordersSection" class="content-section hidden">
+                <h2 class="section-title">Manage orders</h2>
+                <p class="section-content">
+                    Track and manage your orders here once you receive them, or create a manual order now.
+                </p>
+                <button class="create-order-button">Create Order</button>
+            </section>
+
+            <section id="allOrdersContent" class="content-seciton hidden">
+                <h2 class="section-title">Manage orders</h2>
+                <p class="section-content">
+                    Track and manage your orders here once you receive them, or create a manual order now.
+                </p>
+                <button class="create-order-button">Create Order</button>
+            </section>
+            
+            <!-- <section id="abandoned-carts-content" class="content-section hidden">
+                <p>You don't have any abandoned orders.</p>
+            </section> -->
+
+              
+    
+            <!-- <section id="deliverySection" class="hidden">
+                <div class="delivery_card">
+                    <h2 class="delivery_card__header">Connect your Shippo account &amp; ship seamlessly!</h2>
+                    <button class="delivery_card__button">Get Started</button>
+                    <a href="#" class="delivery_card__link">Learn more</a>
+                  </div>
+            </section> -->
+
+            <section id="deliverySection" class="content-section hidden">
+                <div class="delivery_card">
+                    <h2 class="delivery_card_title">Connect your Shippo account &amp; ship seamlessly!</h2>
+                    <button class="delivery_card_button">Get Started</button>
+                    <a href="#" class="delivery_card_link">Learn more</a>
+                </div>
+            </section>
+    
+            <section id="productsSection" class="content-section hidden">
+                <div class="product_container">
+                    <div class="product_header">
+                      
+                      <div class="product_actions">
+                        <input type="search" placeholder="Search Product" class="product_search">
+                        <button class="product_add-button1">Add New Product</button>
+                      </div>
+                    </div>
+                    <div class="product_content">
+                      <h3>Add products to your online store</h3>
+                      <p>It takes only a few seconds to add your products and start selling to the customers.</p>
+                      <button class="product_add-button2">Add New Product</button>
+                    </div>
+                  </div>
+            </section>
+    
+            <section id="analyticsSection" class="content-section hidden">
+                <div class="analytics__header">
+                  <h2>Sales</h2>
+                  <div class="analytics__dropdown">
+                    <span class="analytics__dropdown-selected">This Month</span>
+                    <ul class="analytics__dropdown-options">
+                      <li>This Month</li>
+                      <li>Lifetime</li>
+                      <li>Today</li>
+                      <li>Yesterday</li>
+                      <li>This Week</li>
+                      <li>Last 7 Days</li>
+                      <li>Last Week</li>
+                      <li>Last Month</li>
+                      <li>Custom Range</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="analytics__cards">
+                  <div class="analytics__card">
+                    <h3>Average Orders Per Day</h3>
+                    <p class="analytics__card-value">0</p>
+                  </div>
+                  <div class="analytics__card">
+                    <h3>Total Revenue</h3>
+                    <p class="analytics__card-value">0</p>
+                  </div>
+                  <div class="analytics__card">
+                    <h3>Conversion Rate</h3>
+                    <p class="analytics__card-value">0%</p>
+                  </div>
+                  <div class="analytics__card">
+                    <h3>Top Selling Product</h3>
+                    <p class="analytics__card-value">None</p>
+                  </div>
+                </div>
+              </section>
+              
+    
+            <section id="payouts" class="hidden">
+                <h2>Payouts</h2>
+                <!-- Content for Payouts section -->
+            </section>
+    
+            <section id="discounts" class="hidden">
+                <h2>Discounts</h2>
+                <!-- Content for Discounts section -->
+            </section>
+    
+            <section id="audience" class="hidden">
+                <h2>Audience</h2>
+                <!-- Content for Audience section -->
+            </section>
+    
+            <section id="appearance" class="hidden">
+                <h2>Appearance</h2>
+                <!-- Content for Appearance section -->
+            </section>
+    
+            <section id="plugins" class="hidden">
+                <h2>Plugins</h2>
+                <!-- Content for Plugins section -->
+            </section>
+        </main>
+
+        <!--========== MAIN JS ==========-->
+        <script src="./js/dashboard.js"></script>
+    </body>
+</html>
